@@ -1,0 +1,14 @@
+﻿accnt_num,name,business_name,phone,email,Q1,Q2.a,Q2.b (how_many),Q3,Q4,Q5.1 (Cost of doing Business),Q5.2 (Access to Customers),Q5.3 (Proximity to Amenities),Q5.4 (Transportation),Q5.5 (Safety Services),Q5.6 (Housing Affordability),Q5.7 (Access to Employees),Q5.8 (City/County Permitting Process),Q6,Q7.a,Q7.b,Q7.c,Q7.d,Q7.e,Q8.f,Q8.g,Q7.h,Q8,Q9,Q10.a,Q10.b,Q10.c,Q10.d,Q10.e,Q10.f,Q10.g,Q10.h,Q10.i,Q10.j,Q10.k,batch_number,survey_number
+4000110013839,Lanius Eugenie,Eugenie Antiques,(941)484-1900,,1,2,,2,2,2,1,2,2,2,2,2,2,5,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,1,0,0,0,0,0,10,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,integer answer,1 = Yes,integer answer,1 = Yes,1 = Yes,0 = blank,0 = blank,0 = blank,0 = blank,0 = blank,0 = blank,0 = blank,0 = blank,0 = blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,1 = Yes,1 = Yes,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,0 = false/blank,,
+,,,,,,2 = No,,2 = No,2 = No,1 = Very dissatisfied,1 = Very dissatisfied,1 = Very dissatisfied,1 = Very dissatisfied,1 = Very dissatisfied,1 = Very dissatisfied,1 = Very dissatisfied,1 = Very dissatisfied,1 = 1,1 = true/Consulting Services,1 = true/Export Assistance,1 = true/Growth Assistance,1 = true/Financing,1 = true/Workforce Assistance,1 = true/Industry-Business Relationship Buidling,1 = true/Green-Sustainable Business Practices,1 = true/Government-Regulartory Assistance,2 = No,2 = No,1 = Accounting/Finance,1 = Call Center,1 = Distribution,1 = Engineering/R&D,1 = Headquarters,1 = Management,1 = Manufacturing,1 = Services,1 = Warehousing,1 = IT/Technology,1 = Other,,
+,,,,,,3 = blank,,3 = blank,3 = blank,2 = Neutral,2 = Neutral,2 = Neutral,2 = Neutral,2 = Neutral,2 = Neutral,2 = Neutral,2 = Neutral,2 = 2,,,,,,,,,3 = blank,3 = blank,,,,,,,,,,,,,
+,,,,,,,,,,3 = Very Satisfied,3 = Very Satisfied,3 = Very Satisfied,3 = Very Satisfied,3 = Very Satisfied,3 = Very Satisfied,3 = Very Satisfied,3 = Very Satisfied,3 = 3,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,4 = 4,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,5 = 5,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,6 = 6,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,7 = 7,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,8 = 8,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,9 = 9,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,10 = 10,,,,,,,,,,,,,,,,,,,,,,,
