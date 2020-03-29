@@ -49,45 +49,45 @@ def parseCheckYN(page):
     # set path
     setpath = '/Users/natewagner/Documents/Surveys/'
     path = setpath + page
-    
+
     # Convert to png and to greyscale / rotate
     images = convert_from_path(path)
-    images_bw = images[0].convert('L') 
+    images_bw = images[0].convert('L')
     images_bw = images_bw.transpose(Image.ROTATE_270)
-    
+
     # set path to pytesseract
     pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/4.1.1/bin/tesseract'
-    
-    
+
+
     # extract account number
     accnt_num_dims = (1000+155, 150-140, 1600-200, 60)
-    accnt_num = images_bw.crop(accnt_num_dims)    
+    accnt_num = images_bw.crop(accnt_num_dims)
     accnt_number = pytesseract.image_to_string(accnt_num)
-    
-    
+
+
     # extract company name
     comp_info_dims = (465+250, 1100, 1250+400, 1145)
-    comp_info = images_bw.crop(comp_info_dims) 
+    comp_info = images_bw.crop(comp_info_dims)
     bus_name = pytesseract.image_to_string(comp_info)
-    
-    
+
+
     # question 2
     question2_dims = (150-40, 783+210, 290+10, 923+125)
-    question2 = images_bw.crop(question2_dims)    
+    question2 = images_bw.crop(question2_dims)
     q2 = Image.new('L', (190, 190))
     q2.paste(question2, (0, 60))
-    
+
     Q2p = []
     for pixel in iter(q2.getdata()):
         Q2p.append(pixel)
-        
+
     q2df = pd.DataFrame(Q2p).transpose()
     q2df['question'] = 'question2'
     q2df['accnt_num'] = accnt_number
     q2df['bus_name'] = bus_name
-    
-    
-    
+
+
+
     # question 3
     question3_dims = (135-30, 860+130, 275+20, 1000+60)
     question3 = images_bw.crop(question3_dims)
@@ -102,15 +102,15 @@ def parseCheckYN(page):
     q3df['question'] = 'question3'
     q3df['accnt_num'] = accnt_number
     q3df['bus_name'] = bus_name
-    
-    
-    
+
+
+
     # question 4
     question4_dims = (115, 1070+63, 305, 1070+135)
-    question4 = images_bw.crop(question4_dims) 
+    question4 = images_bw.crop(question4_dims)
     q4 = Image.new('L', (190, 190))
     q4.paste(question4, (0, 60))
-    
+
     Q4p = []
     for pixel in iter(q4.getdata()):
         Q4p.append(pixel)
@@ -119,15 +119,20 @@ def parseCheckYN(page):
     q4df['question'] = 'question4'
     q4df['accnt_num'] = accnt_number
     q4df['bus_name'] = bus_name
-    
-    
-    
+
+
+    # question 5 - Dominic
+
+
+    # question 6 - Andrew
+
+
     # question 8
     question8_dims = (1060+300, 928-185, 1250+300, 1118-315)
-    question8 = images_bw.crop(question8_dims) 
+    question8 = images_bw.crop(question8_dims)
     q8 = Image.new('L', (190, 190))
     q8.paste(question8, (0, 60))
-    
+
     Q8p = []
     for pixel in iter(q8.getdata()):
         Q8p.append(pixel)
@@ -136,19 +141,19 @@ def parseCheckYN(page):
     q8df['question'] = 'question8'
     q8df['accnt_num'] = accnt_number
     q8df['bus_name'] = bus_name
-    
-    
-    
+
+
+
     # question 9
     question9_dims = (1060+112, 928-100, 1250+112, 1118-240)
-    question9 = images_bw.crop(question9_dims) 
+    question9 = images_bw.crop(question9_dims)
     q9 = Image.new('L', (190, 190))
     q9.paste(question9, (0, 60))
-    
+
     Q9p = []
     for pixel in iter(q9.getdata()):
         Q9p.append(pixel)
-        
+
     q9df = pd.DataFrame(Q9p).transpose()
     q9df['question'] = 'question9'
     q9df['accnt_num'] = accnt_number
@@ -156,10 +161,10 @@ def parseCheckYN(page):
 
     check_YN_data = pd.concat([q2df, q3df, q4df, q8df, q9df])
     check_YN_data['survey'] = str(page)
-    
-    
+
+
     return(check_YN_data)
-    
+
 
 
 
@@ -175,7 +180,7 @@ end = '.pdf'
 checkYN = pd.DataFrame()
 for pages in range(10, 19):
     for x in range(1, pdfs[pages-1]+1):
-        survey = batch + str(pages) + survey_num + str(x) + end        
+        survey = batch + str(pages) + survey_num + str(x) + end
         df = parseCheckYN(survey)
         checkYN = checkYN.append(df)
     checkYN['batch'] = str(pages)
@@ -187,9 +192,6 @@ checkYN.shape
 
 
 #checkYN.to_csv('/Users/natewagner/Documents/Surveys/checkYN_second_half.csv', encoding='utf-8', index = False)
-
-
-
 
 
 
@@ -224,13 +226,13 @@ for line in dff.iloc[:,0]:
     num = num.replace(":", "")
     num = num.replace(".", "")
     items.append(num)
- 
-    
+
+
 test = "BVUYT To4de"
 abc = "abcdefghijklmnop"
 for x in test.lower():
     print(x in abc)
-    
+
 
 
 
